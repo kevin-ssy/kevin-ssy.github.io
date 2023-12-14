@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://kevin-ssy.github.io//about/sitemap.xml
+Sitemap: https://kevin-ssy.github.io//sitemap.xml
