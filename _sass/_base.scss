@@ -217,7 +217,10 @@ blockquote {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
   background-color: #002147; //var(--global-bg-color);
-  opacity: 0.95;
+  // opacity: 0.95;
+  span {
+    color: #fff;
+  }
 }
 
 .navbar .dropdown-menu {
@@ -679,7 +682,7 @@ footer.sticky-bottom {
       .preview {
         width: 100%;
         min-width: 80px;
-        max-width: 200px;
+        // max-width: 33.33333%;
       }
 
       .abbr {
