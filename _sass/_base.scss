@@ -216,7 +216,7 @@ blockquote {
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-bg-color);
+  background-color: #002147; //var(--global-bg-color);
   opacity: 0.95;
 }
 
@@ -254,11 +254,11 @@ blockquote {
   }
 
   .navbar-brand {
-    color: var(--global-text-color);
+    color: #fff; //var(--global-text-color);
   }
 
   .navbar-nav .nav-item .nav-link {
-    color: var(--global-text-color);
+    color: #fff; //var(--global-text-color);
 
     &:hover {
       color: var(--global-hover-color);
@@ -268,7 +268,7 @@ blockquote {
   .navbar-nav .nav-item.active>.nav-link {
     background-color: inherit;
     font-weight: bolder;
-    color: var(--global-theme-color);
+    color: #fff; //var(--global-theme-color);
 
     &:hover {
       color: var(--global-hover-color);
@@ -282,7 +282,7 @@ blockquote {
 
     a {
       i::before {
-        color: var(--global-text-color);
+        color: #fff; //var(--global-text-color);
         transition-property: all 0.2s ease-in-out;
       }
 
@@ -660,6 +660,21 @@ footer.sticky-bottom {
 
     li {
       margin-bottom: 1rem;
+      
+
+      .highlight {
+        background-color: #FFFFCC;
+      }
+
+      .row {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 1rem solid transparent;
+      }
+      
+      .highlight[data-theme='dark'] {
+        background-color: #002147;
+      }
 
       .preview {
         width: 100%;
