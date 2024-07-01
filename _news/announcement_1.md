@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 11th July 2022
-inline: true
+inline: false
 related_posts: false
 ---
 
