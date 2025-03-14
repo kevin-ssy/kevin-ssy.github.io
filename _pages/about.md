@@ -14,7 +14,6 @@ news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
-professional_service: true
 ---
 
 I am currently a research scientist at ByteDance. Previously I got my DPhil (PhD) degree at [University of Oxford](http://www.ox.ac.uk/) under the supervision of Professor [Philip Torr](http://www.robots.ox.ac.uk/~phst/) and Professor [Victor Prisacariu](http://www.robots.ox.ac.uk/~victor/).
