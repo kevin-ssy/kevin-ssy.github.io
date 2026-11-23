@@ -204,6 +204,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - assets/jupyter
 keep_files:
   - CNAME
   - .nojekyll
