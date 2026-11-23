@@ -1,9 +1,34 @@
 "CVPR":
   url: https://cvpr.thecvf.com/
-  color: "#00369f"
+  color: "#0F3460"
 
 "ICCV":
-  url: https://iccv2023.thecvf.com/
+  url: https://iccv.thecvf.com/
+  color: "#0F3460"
 
 "NeurIPS":
   url: https://neurips.cc/
+  color: "#1F6FB2"
+
+"ICLR":
+  url: https://iclr.cc/
+  color: "#1F6FB2"
+
+"TPAMI":
+  url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=34
+  color: "#2E4057"
+
+"3DV":
+  color: "#334155"
+
+"RSS":
+  color: "#334155"
+
+"TMLR":
+  color: "#334155"
+
+"ICASSP":
+  color: "#475569"
+
+"arXiv":
+  color: "#64748B"

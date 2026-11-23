@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: A list of my previous publications.
+description: Selected and full list of research publications (* denotes equal contribution).
 nav: true
 nav_order: 1
 ---

@@ -1,4 +1,4 @@
-For the full publication list, please refer to my <a href="https://scholar.google.com/citations?user=PoAvGRMAAAAJ&hl=en"> Google Scholar</a>.
+          <p class="section-note">Selected papers below; see <a href="{{ '/publications/' | relative_url }}">all publications</a> or <a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}&hl=en">Google Scholar</a> for the complete list. (* denotes equal contribution)</p>
           <div class="publications">
             {% bibliography -f {{ site.scholar.bibliography }} --group_by none --query @*[selected=true]* --sort_by year %}
           </div>

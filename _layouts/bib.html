@@ -1,9 +1,9 @@
 ---
 ---
 <!-- _layouts/bib.html -->
-      <div class="row {% if entry.highlight %}highlight{% endif %}">
+      <div class="row pub-row {% if entry.highlight %}highlight{% endif %}">
         {%- if site.enable_publication_thumbnails -%}
-        <div class="col-sm-4 {% if entry.preview %}preview{% else %}abbr{% endif %}">
+        <div class="{% if entry.preview %}col-sm-3 preview{% else %}col-sm-2 abbr{% endif %}">
         {%- if entry.preview -%}
           {% if entry.preview contains '://' -%}
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
@@ -21,7 +21,11 @@
             {%- if site.data.venues[entry.abbr].color != blank -%}
               {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' -%}
             {%- endif -%}
+            {%- if site.data.venues[entry.abbr].url -%}
             <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr>
+            {%- else -%}
+            <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}>{{entry.abbr}}</abbr>
+            {%- endif -%}
           {%- else -%}
             <abbr class="badge">{{entry.abbr}}</abbr>
           {%- endif -%}
@@ -30,7 +34,7 @@
         {%- endif -%}
 
         <!-- Entry bib key -->
-        <div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+        <div id="{{entry.key}}" class="{% if site.enable_publication_thumbnails %}{% if entry.preview %}col-sm-9{% else %}col-sm-10{% endif %}{% else %}col-sm-12{% endif %}">
         <!-- Title -->
         <div class="title">{{entry.title}}</div>
         <!-- Author -->
@@ -131,10 +135,15 @@
         {%- capture periodical -%}{{ entrytype }}{%- if entrytype_text != "" and entryyear != "" -%}, {%- endif -%}{{ entrymonth }}{{ entryyear }}{%- endcapture -%}
         <div class="periodical">
           {{ periodical | strip }}
+          {%- if entry.award -%}
+            <span class="pub-award"><i class="fa-solid fa-trophy fa-xs"></i> {{ entry.award }}</span>
+          {%- endif -%}
         </div>
+        {%- if entry.note -%}
         <div class="periodical">
           {{ entry.note | strip }}
         </div>
+        {%- endif -%}
 
           <!-- Links/Buttons -->
           <div class="links">
@@ -142,7 +151,7 @@
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
           {%- endif %}
           {%- if entry.arxiv %}
-            <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
+            <a href="https://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
           {%- endif %}
           {%- if entry.bibtex_show %}
             <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
